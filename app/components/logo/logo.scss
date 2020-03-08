@@ -1,0 +1,13 @@
+.system {
+  &-logo {
+    display: flex;
+    align-items: center;
+    &__img {
+      margin-right: system-spacing(2xs);
+      height: 26px;
+    }
+    &__text {
+      font-weight: 700;
+    }
+  }
+}
