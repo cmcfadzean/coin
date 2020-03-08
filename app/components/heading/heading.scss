@@ -1,0 +1,13 @@
+.system {
+  &-heading {
+    display: flex;
+    align-items: center;
+    font-size: system-font-size(3xl);
+    &__title {
+      flex: 1;
+    }
+    &__stat {
+
+    }
+  }
+}
