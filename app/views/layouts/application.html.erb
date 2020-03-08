@@ -11,6 +11,7 @@
   </head>
 
   <body>
+    <%= image_tag("coin.png", class: "")%> COIN
     <% if user_signed_in? %>
       <%= link_to "Edit profile", edit_user_registration_path, :class => '#' %>
       <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => '#'  %>
