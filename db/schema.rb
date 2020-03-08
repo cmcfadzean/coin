@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_07_174143) do
+ActiveRecord::Schema.define(version: 2020_03_08_172630) do
 
   create_table "employees", force: :cascade do |t|
     t.integer "user_id"
@@ -18,7 +18,16 @@ ActiveRecord::Schema.define(version: 2020_03_07_174143) do
     t.string "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_events_on_user_id"
+    t.index ["user_id"], name: "index_employees_on_user_id"
+  end
+
+  create_table "salaries", force: :cascade do |t|
+    t.integer "employee_id"
+    t.decimal "salary"
+    t.date "effective"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["employee_id"], name: "index_salaries_on_employee_id"
   end
 
   create_table "users", force: :cascade do |t|
