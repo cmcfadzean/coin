@@ -11,10 +11,10 @@
   </head>
 
   <body>
-    <%= component "navbar" do %>
-      
+    <%= component "navbar" do %><% end %>
+    <%= component "container" do %>
+      <%= yield %>
     <% end %>
-    <%= yield %>
     <%= component "alert", id: "notice", message: notice %>
     <%= component "alert", id: "alert", message: alert %>
   </body>
