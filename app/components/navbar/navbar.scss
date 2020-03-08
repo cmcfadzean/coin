@@ -1,0 +1,18 @@
+.system {
+  &-navbar {
+    padding: system-spacing(sm);
+    display: flex;
+    align-items: center;
+    &__left {
+      padding-right: system-spacing(sm);
+    }
+    &__body {
+      flex: 1;
+      text-align: center;
+    }
+    &__right {
+      padding-left: system-spacing(sm);
+      text-align: right;
+    }
+  }
+}
