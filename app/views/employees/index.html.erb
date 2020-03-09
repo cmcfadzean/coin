@@ -1,28 +1,9 @@
-<%= component "heading", title: "Employees", stat: number_to_currency(@total_cost, :unit => "$") %>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Title</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @employees.each do |employee| %>
-      <tr>
-        <td><%= employee.name %></td>
-        <td><%= employee.title %></td>
-        <td><%= link_to 'Salary', employee_salaries_path(employee) %></td>
-        <td><%= link_to 'Show', employee %></td>
-        <td><%= link_to 'Edit', edit_employee_path(employee) %></td>
-        <td><%= link_to 'Destroy', employee, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+<%= component "heading", title: "Staff", stat: number_to_currency(@total_cost, :unit => "$") %>
+<div class="">
+  <% @employees.each do |employee| %>
+    <%= component "item", title: employee.name, subtitle: employee.title, link: edit_employee_path(employee) do %>
+      <%= link_to employee_salaries_path(employee) do %><i class="fas fa-dollar-sign"></i><% end %>
     <% end %>
-  </tbody>
-</table>
-
-<br>
-
+  <% end %>
+</div>
 <%= link_to 'New Employee', new_employee_path %>
