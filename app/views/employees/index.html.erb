@@ -1,9 +1,11 @@
 <%= component "heading", title: "Staff", stat: number_to_currency(@total_cost, :unit => "$") %>
 <div class="">
+  <%= component "item", title: "", subtitle: "", link: "" do %>
+    <%= link_to 'New Employee', new_employee_path %>
+  <% end %>
   <% @employees.each do |employee| %>
     <%= component "item", title: employee.name, subtitle: employee.title, link: edit_employee_path(employee) do %>
       <%= link_to employee_salaries_path(employee) do %><i class="fas fa-dollar-sign"></i><% end %>
     <% end %>
   <% end %>
 </div>
-<%= link_to 'New Employee', new_employee_path %>

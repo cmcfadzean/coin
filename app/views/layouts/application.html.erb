@@ -12,7 +12,9 @@
   </head>
 
   <body>
-    <%= component "navbar" do %><% end %>
+    <%= component "navbar" do %>
+      <%= component "menu" %>
+    <% end %>
     <%= component "container" do %>
       <%= yield %>
     <% end %>
