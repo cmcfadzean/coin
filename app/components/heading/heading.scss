@@ -2,6 +2,7 @@
   &-heading {
     display: flex;
     align-items: center;
+    margin: system-spacing(xl) 0;
     font-size: system-font-size(3xl);
     font-weight: 900;
     &__title {

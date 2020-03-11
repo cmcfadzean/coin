@@ -1,0 +1,13 @@
+.system-menu {
+  display: flex;
+  justify-content: center;
+  &__link {
+    padding: 0 system-spacing();
+    display: flex;
+    align-items: center;
+  }
+  &__icon {
+    margin-right: system-spacing(xs);
+    font-size: system-font-size(2xl);
+  }
+}

@@ -1,11 +1,14 @@
 <div class="system-menu">
-  <%= link_to  employees_path do %>
-    Payroll
+  <%= link_to employees_path, class: "system-menu__link" do %>
+    <i class="system-menu__icon far fa-id-badge"></i>
+    <span class="system-mebu__text">Payroll</span>
   <% end %>
-  <%= link_to  employees_path do %>
-    Expenses
+  <%= link_to employees_path, class: "system-menu__link"  do %>
+    <i class="system-menu__icon far fa-credit-card"></i>
+    <span class="system-mebu__text">Expenses</span>
   <% end %>
-  <%= link_to  employees_path do %>
-    Budgets
+  <%= link_to employees_path, class: "system-menu__link"  do %>
+    <i class="system-menu__icon fas fa-comment-dollar"></i>
+    <span class="system-mebu__text">Budgets</span>
   <% end %>
 </div>

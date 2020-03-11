@@ -2,5 +2,4 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Show', [@salary.employee, @salary] %> |
-<%= link_to 'Back', employee_salaries_path(@salary.employee) %>
+<%= link_to 'Remove', [@salary.employee, @salary], method: :delete, data: { confirm: 'Are you sure?' } %>
