@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :budgets
+  resources :expenses
   root 'employees#index'
   resources :employees do
     resources :salaries
