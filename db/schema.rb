@@ -13,10 +13,12 @@
 ActiveRecord::Schema.define(version: 2020_03_11_162152) do
 
   create_table "budgets", force: :cascade do |t|
+    t.integer "user_id"
     t.decimal "amount"
     t.string "year"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_budgets_on_user_id"
   end
 
   create_table "employees", force: :cascade do |t|
@@ -29,11 +31,13 @@ ActiveRecord::Schema.define(version: 2020_03_11_162152) do
   end
 
   create_table "expenses", force: :cascade do |t|
+    t.integer "user_id"
     t.string "item"
     t.decimal "price"
     t.date "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_expenses_on_user_id"
   end
 
   create_table "salaries", force: :cascade do |t|
