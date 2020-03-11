@@ -5,6 +5,9 @@ class SalariesController < ApplicationController
   # GET employees/1/salaries
   def index
     @salaries = @employee.salaries
+    unless @employee.salaries.last.nil?
+      @salary = @employee.salaries.last.salary
+    end 
   end
 
   # GET employees/1/salaries/1

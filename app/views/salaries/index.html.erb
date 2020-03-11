@@ -1,4 +1,4 @@
-<%= component "heading", title: @employee.name , stat: number_to_currency(@salaries.last.salary, :unit => "$") %>
+<%= component "heading", title: @employee.name , stat: number_to_currency(@salary, :unit => "$") %>
 
 <%= component "item", title: "", subtitle: "", link: "" do %>
   <%= link_to 'New Salary', new_employee_salary_path(params[:employee_id]) %>
