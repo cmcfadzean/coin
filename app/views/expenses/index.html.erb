@@ -1,31 +1,10 @@
-<p id="notice"><%= notice %></p>
 
-<h1>Expenses</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Item</th>
-      <th>Price</th>
-      <th>Date</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @expenses.each do |expense| %>
-      <tr>
-        <td><%= expense.item %></td>
-        <td><%= expense.price %></td>
-        <td><%= expense.date %></td>
-        <td><%= link_to 'Show', expense %></td>
-        <td><%= link_to 'Edit', edit_expense_path(expense) %></td>
-        <td><%= link_to 'Destroy', expense, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Expense', new_expense_path %>
+<%= component "heading", title: "Expenses", stat: number_to_currency(@total_expenses, :unit => "$") %>
+<%= component "item", title: "", subtitle: "", link: "" do %>
+  <%= link_to 'New Expense', new_expense_path %>
+<% end %>
+<% @expenses.each do |expense| %>
+  <%= component "item", title: expense.item, subtitle: expense.date.strftime("%B %d, %Y"), link: edit_expense_path(expense) do %>
+    <%= number_to_currency(expense.price, :unit => "$") %>
+  <% end %>
+<% end %>

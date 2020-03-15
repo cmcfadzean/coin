@@ -6,6 +6,7 @@ class BudgetsController < ApplicationController
   # GET /budgets.json
   def index
     @budgets = current_user.budgets
+    @current_budget = current_user.budgets.last.amount
   end
 
   # GET /budgets/1

@@ -1,29 +1,8 @@
-<p id="notice"><%= notice %></p>
 
-<h1>Budgets</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Amount</th>
-      <th>Year</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @budgets.each do |budget| %>
-      <tr>
-        <td><%= budget.amount %></td>
-        <td><%= budget.year %></td>
-        <td><%= link_to 'Show', budget %></td>
-        <td><%= link_to 'Edit', edit_budget_path(budget) %></td>
-        <td><%= link_to 'Destroy', budget, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Budget', new_budget_path %>
+<%= component "heading", title: "Budgets", stat: number_to_currency(@current_budget, :unit => "$") %>
+<%= component "item", title: "", subtitle: "", link: "" do %>
+  <%= link_to 'New Budget', new_budget_path %>
+<% end %>
+<% @budgets.each do |budget| %>
+  <%= component "item", title: number_to_currency(budget.amount, :unit => "$"), subtitle: budget.year, link: edit_budget_path(budget) %>
+<% end %>

@@ -4,5 +4,5 @@
   <%= link_to 'New Salary', new_employee_salary_path(params[:employee_id]) %>
 <% end %>
 <% @salaries.each do |salary| %>
-  <%= component "item", title: salary.salary, subtitle: salary.effective.strftime("%B %d, %Y"), link: edit_employee_salary_path(salary.employee, salary) %>
+  <%= component "item", title: number_to_currency(salary.salary, :unit => "$"), subtitle: salary.effective.strftime("%B %d, %Y"), link: edit_employee_salary_path(salary.employee, salary) %>
 <% end %>
