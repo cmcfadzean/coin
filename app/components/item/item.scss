@@ -5,52 +5,52 @@
   align-items: center;
   &:nth-child(10n+1) {
     .system-item__left {
-      background-image: url('face_1.png');
+      background-image: url(asset-path('face_1.png'));
     }
   }
   &:nth-child(10n+2) {
     .system-item__left {
-      background-image: url('face_2.png');
+      background-image: url(asset-path('face_2.png'));
     }
   }
   &:nth-child(10n+3) {
     .system-item__left {
-      background-image: url('face_3.png');
+      background-image: url(asset-path('face_3.png'));
     }
   }
   &:nth-child(10n+4) {
     .system-item__left {
-      background-image: url('face_4.png');
+      background-image: url(asset-path('face_4.png'));
     }
   }
   &:nth-child(10n+5) {
     .system-item__left {
-      background-image: url('face_5.png');
+      background-image: url(asset-path('face_5.png'));
     }
   }
   &:nth-child(10n+6) {
     .system-item__left {
-      background-image: url('face_6.png');
+      background-image: url(asset-path('face_6.png'));
     }
   }
   &:nth-child(10n+7) {
     .system-item__left {
-      background-image: url('face_7.png');
+      background-image: url(asset-path('face_7.png'));
     }
   }
   &:nth-child(10n+8) {
     .system-item__left {
-      background-image: url('face_8.png');
+      background-image: url(asset-path('face_8.png'));
     }
   }
   &:nth-child(10n+9) {
     .system-item__left {
-      background-image: url('face_9.png');
+      background-image: url(asset-path('face_9.png'));
     }
   }
   &:nth-child(10n+10) {
     .system-item__left {
-      background-image: url('face_10.png');
+      background-image: url(asset-path('face_10.png'));
     }
   }
   &.none {
@@ -60,12 +60,12 @@
   }
   &.cash {
     .system-item__left {
-      background-image: url('cash.png');
+      background-image: url(asset-path('cash.png'));
     }
   }
   &.cash-bag {
     .system-item__left {
-      background-image: url('cash_bag.png');
+      background-image: url(asset-path('cash_bag.png'));
     }
   }
   &__left {
