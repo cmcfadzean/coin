@@ -1,6 +1,6 @@
 <%= component "heading", title: "Staff", stat: number_to_currency(@total_cost, :unit => "$") %>
 <div class="">
-  <%= component "item", title: "", subtitle: "", link: "" do %>
+  <%= component "item", title: "", subtitle: "", link: "", style_class: "none" do %>
     <%= link_to 'New Employee', new_employee_path %>
   <% end %>
   <% @employees.each do |employee| %>

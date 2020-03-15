@@ -1,8 +1,8 @@
 
 <%= component "heading", title: "Budgets", stat: number_to_currency(@current_budget, :unit => "$") %>
-<%= component "item", title: "", subtitle: "", link: "" do %>
+<%= component "item", title: "", subtitle: "", link: "", style_class: "none" do %>
   <%= link_to 'New Budget', new_budget_path %>
 <% end %>
 <% @budgets.each do |budget| %>
-  <%= component "item", title: number_to_currency(budget.amount, :unit => "$"), subtitle: budget.year, link: edit_budget_path(budget) %>
+  <%= component "item", title: number_to_currency(budget.amount, :unit => "$"), subtitle: budget.year, link: edit_budget_path(budget), style_class: "cash-bag"  %>
 <% end %>

@@ -53,6 +53,21 @@
       background-image: url('face_10.png');
     }
   }
+  &.none {
+    .system-item__left {
+      background-image: none;
+    }
+  }
+  &.cash {
+    .system-item__left {
+      background-image: url('cash.png');
+    }
+  }
+  &.cash-bag {
+    .system-item__left {
+      background-image: url('cash_bag.png');
+    }
+  }
   &__left {
     margin-right: system-spacing(sm);
     background-size: cover;

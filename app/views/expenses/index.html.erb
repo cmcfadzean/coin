@@ -1,10 +1,10 @@
 
 <%= component "heading", title: "Expenses", stat: number_to_currency(@total_expenses, :unit => "$") %>
-<%= component "item", title: "", subtitle: "", link: "" do %>
+<%= component "item", title: "", subtitle: "", link: "", style_class: "none" do %>
   <%= link_to 'New Expense', new_expense_path %>
 <% end %>
 <% @expenses.each do |expense| %>
-  <%= component "item", title: expense.item, subtitle: expense.date.strftime("%B %d, %Y"), link: edit_expense_path(expense) do %>
+  <%= component "item", title: expense.item, subtitle: expense.date.strftime("%B %d, %Y"), link: edit_expense_path(expense), style_class: "cash"  do %>
     <%= number_to_currency(expense.price, :unit => "$") %>
   <% end %>
 <% end %>
